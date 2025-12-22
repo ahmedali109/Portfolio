@@ -12,3 +12,11 @@ initAnimations();
 setTimeout(() => {
   initSnowEffect();
 }, 100);
+
+window.addEventListener("blur" , () => {
+   document.title = "Come back :)";
+});
+
+window.addEventListener("focus" , () => {
+   document.title = "Ahmed Ali - Portfolio";
+});
