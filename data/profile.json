@@ -1,0 +1,81 @@
+{
+  "id": 2,
+  "name": "Ahmed Ali",
+  "role": "Software Engineer",
+  "image": "../assets/images/profile.jpeg",
+  "email": "ahmed@nezukohr.com",
+  "location": "Alexandria, Egypt",
+  "joinDate": "February 2024",
+  "linkedinUrl": "#",
+  "githubUrl": "#",
+  "bio": "Full-stack software engineer with 5+ years of experience building scalable web applications. Passionate about creating elegant solutions to complex problems and mentoring junior developers.",
+  "expertise": [
+    "Full-Stack Development",
+    "React & Node.js",
+    "Cloud Architecture",
+    "Database Design",
+    "API Development",
+    "DevOps"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "title": "Senior Software Engineer",
+      "company": "Nezuko HR",
+      "period": "2024 - Present",
+      "description": "Developing and maintaining the core platform infrastructure and features."
+    },
+    {
+      "id": 2,
+      "title": "Software Engineer",
+      "company": "Digital Innovation Labs",
+      "period": "2021 - 2024",
+      "description": "Built responsive web applications and RESTful APIs for enterprise clients."
+    },
+    {
+      "id": 3,
+      "title": "Junior Developer",
+      "company": "StartUp Hub",
+      "period": "2019 - 2021",
+      "description": "Contributed to various web development projects and learned modern frameworks."
+    }
+  ],
+  "achievements": [
+    "Architected microservices infrastructure reducing system downtime by 60%",
+    "Optimized database queries improving application performance by 45%",
+    "Led migration to cloud infrastructure saving 30% in operational costs",
+    "Mentored 10+ junior developers in modern development practices"
+  ],
+  "currentProjects": [
+    {
+      "id": 1,
+      "name": "Platform Modernization",
+      "description": "Upgrading the tech stack to latest frameworks and improving scalability.",
+      "status": "In Progress"
+    },
+    {
+      "id": 2,
+      "name": "Real-time Analytics Dashboard",
+      "description": "Building comprehensive analytics tools for HR insights.",
+      "status": "In Progress"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "JavaScript/TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "Git"
+    ],
+    "soft": [
+      "Team Collaboration",
+      "Problem Solving",
+      "Code Review",
+      "Mentoring"
+    ]
+  }
+}
