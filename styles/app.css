@@ -47,6 +47,13 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+}
+
 /* Custom cursor styles */
 .custom-cursor {
   position: fixed;
@@ -103,9 +110,11 @@ body {
 @media (max-width: 768px) {
   #root {
     height: auto;
+    min-height: calc(100vh - 10px);
     padding: 10px;
     margin: 0 auto;
     max-width: 100%;
+    overflow-y: visible;
   }
 }
 
@@ -176,6 +185,14 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    height: auto;
+    min-height: 100%;
+  }
 }
 
 @keyframes pageEnter {
