@@ -23,8 +23,8 @@ export function ProfilePage() {
               <div class="profile-meta">
                 <span class="profile-meta-item">📧 ${data.email}</span>
                 <span class="profile-meta-item">📍 ${data.location}</span>
-                <span class="profile-meta-item">📅 Joined ${
-                  data.joinDate
+                <span class="profile-meta-item">📅 ${
+                  new Date().getFullYear()
                 }</span>
               </div>
               <div class="profile-social">
