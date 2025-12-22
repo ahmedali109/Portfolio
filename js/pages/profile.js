@@ -1,10 +1,10 @@
-export function AboutPage() {
+export function ProfilePage() {
   const container = document.createElement("div");
   container.className = "page-container";
   container.innerHTML = `
     <div class="p-8 max-w-4xl mx-auto">
       <button class="back-btn mb-8 px-4 py-2 bg-gray-800 text-white rounded-lg" data-animate>← Back</button>
-      <h1 class="text-5xl font-bold mb-6 text-gray-900" data-animate>About Me</h1>
+      <h1 class="text-5xl font-bold mb-6 text-gray-900" data-animate>Profile</h1>
       <div class="space-y-4" data-animate>
         <p class="text-xl text-gray-600 leading-relaxed">Learn more about my journey and experience.</p>
         <p class="text-lg text-gray-500 leading-relaxed">Passionate about creating beautiful, functional experiences.</p>

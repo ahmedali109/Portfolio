@@ -1,5 +1,5 @@
 import { wrapper } from "./wrapper.js";
-import { AboutPage } from "./pages/about.js";
+import { ProfilePage } from "./pages/profile.js";
 import { ProjectsPage } from "./pages/projects.js";
 import { SkillsPage } from "./pages/skills.js";
 import { ContactPage } from "./pages/contact.js";
@@ -10,11 +10,11 @@ import { TestimonialsPage } from "./pages/testimonials.js";
 const routes = {
   "": wrapper,
   home: wrapper,
-  about: AboutPage,
   projects: ProjectsPage,
   skills: SkillsPage,
   contact: ContactPage,
-  experience: ExperiencePage,
+  expierence: ExperiencePage,
+  profile: ProfilePage,
   blog: BlogPage,
   testimonials: TestimonialsPage,
 };
@@ -41,21 +41,15 @@ export function renderRoute() {
     if (typeof component === "string") {
       root.innerHTML = component;
       if (hash === "" || hash === "home") {
-        const gridItems = document.querySelectorAll(".grid > div");
-        const paths = [
-          "about",
-          "projects",
-          "skills",
-          "contact",
-          "experience",
-          "blog",
-          "testimonials",
-        ];
-        gridItems.forEach((item, index) => {
+        const gridItems = document.querySelectorAll(".grid-item[data-show]");
+        gridItems.forEach((item) => {
           item.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            navigateTo(paths[index]);
+            const page = item.getAttribute("data-show");
+            if (page) {
+              navigateTo(page);
+            }
           });
         });
       }
