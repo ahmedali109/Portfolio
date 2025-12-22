@@ -1,5 +1,5 @@
 {
-  "id": 2,
+  "id": 1,
   "name": "Ahmed Ali",
   "role": "Software Engineer",
   "image": "../assets/images/profile.jpeg",
@@ -7,36 +7,66 @@
   "location": "Zagazig, Egypt",
   "linkedinUrl": "https://www.linkedin.com/in/ahmedalynaguib/",
   "githubUrl": "https://github.com/ahmedali109",
-  "bio": "Full-stack software engineer with 5+ years of experience building scalable web applications. Passionate about creating elegant solutions to complex problems and mentoring junior developers.",
-  "expertise": [
-    "Full-Stack Development",
-    "React & Node.js",
-    "Cloud Architecture",
-    "Database Design",
-    "API Development",
-    "DevOps"
+  "bio": [
+    "Computer Science student with a passion for building systems from scratch.",
+    "I enjoy exploring system design, writing clean code, and delivering well-crafted products with real-world value."
   ],
-  "experience": [
+  "education": [
     {
       "id": 1,
-      "title": "Senior Software Engineer",
-      "company": "Nezuko HR",
-      "period": "2024 - Present",
-      "description": "Developing and maintaining the core platform infrastructure and features."
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "Zagazig University",
+      "period": "2023 - 2027",
+      "details": [
+        "Relevant Coursework: Data Structures and Algorithms, Database Management Systems, Operating Systems, Web Development.",
+        "Activities: Member of the Google Developer Student Clubs, Participant in coding competitions and hackathons."
+      ]
     },
     {
       "id": 2,
-      "title": "Software Engineer",
-      "company": "Digital Innovation Labs",
-      "period": "2021 - 2024",
-      "description": "Built responsive web applications and RESTful APIs for enterprise clients."
+      "title": "Flutter Developer Intern",
+      "company": "Information Technology Institute (ITI)",
+      "period": "jul 2025 - Aug 2025",
+      "description": [
+        "Developed cross-platform mobile applications using Flutter framework.",
+        "Implemented responsive UI designs and ensured seamless user experience across devices.",
+        "Collaborated with backend developers to integrate APIs and manage data flow."
+      ]
+    }
+  ],
+  "volunteering": [
+    {
+      "id": 1,
+      "title": "Flutter Co-lead",
+      "company": "Google Developer Student Clubs - Zagazig University",
+      "period": "oct 2025 - Present",
+      "description": [
+        "Leading a team of developers in creating mobile applications using Flutter.",
+        "Organizing workshops and coding sessions to enhance members' skills in mobile development.",
+        "Collaborating with other leads to plan and execute club events and projects."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "HR Team Member",
+      "company": "ICPC Zagazig University",
+      "period": "2025",
+      "description": [
+        "Assisted in organizing and managing recruitment processes for the ICPC team.",
+        "Monitored participant feedback to enhance overall experience and maintain quality standards.",
+        "Maintained records of applicants and facilitated smooth onboarding."
+      ]
     },
     {
       "id": 3,
-      "title": "Junior Developer",
-      "company": "StartUp Hub",
-      "period": "2019 - 2021",
-      "description": "Contributed to various web development projects and learned modern frameworks."
+      "title": "BD Team Member",
+      "company": "ZagEng Community",
+      "period": "2025",
+      "description": [
+        "Contributed to business development strategies to expand community reach.",
+        "Assisted in organizing events and workshops to engage members and promote learning.",
+        "Collaborated with team members to identify opportunities for growth and improvement."
+      ]
     }
   ],
   "achievements": [
@@ -45,36 +75,30 @@
     "Led migration to cloud infrastructure saving 30% in operational costs",
     "Mentored 10+ junior developers in modern development practices"
   ],
-  "currentProjects": [
-    {
-      "id": 1,
-      "name": "Platform Modernization",
-      "description": "Upgrading the tech stack to latest frameworks and improving scalability.",
-      "status": "In Progress"
-    },
-    {
-      "id": 2,
-      "name": "Real-time Analytics Dashboard",
-      "description": "Building comprehensive analytics tools for HR insights.",
-      "status": "In Progress"
-    }
-  ],
   "skills": {
     "technical": [
-      "JavaScript/TypeScript",
-      "React",
+      "Arduino",
+      "Bash Scripting",
+      "Bootstrap",
+      "Cpp",
+      "CSS",
+      "Dart",
+      "Figma",
+      "Firebase",
+      "Flutter",
+      "Git / GitHub",
+      "HTML",
+      "JavaScript / ES6",
+      "Linux",
       "Node.js",
       "PostgreSQL",
-      "MongoDB",
-      "AWS",
-      "Docker",
-      "Git"
-    ],
-    "soft": [
-      "Team Collaboration",
-      "Problem Solving",
-      "Code Review",
-      "Mentoring"
+      "Python",
+      "React",
+      "RESTful APIs",
+      "SASS",
+      "SQL",
+      "supabase",
+      "TypeScript"
     ]
   }
 }
