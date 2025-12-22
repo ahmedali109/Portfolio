@@ -84,12 +84,20 @@
 }
 
 .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
   text-decoration: none;
   color: white;
   transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-link svg {
+  flex-shrink: 0;
 }
 
 .social-link:hover {
@@ -199,8 +207,120 @@
 }
 
 .experience-description {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-description li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
+}
+
+.experience-description li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #4ecdc4;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Education Timeline Styles */
+.education-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.education-item {
+  position: relative;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item::before {
+  content: "🎓";
+  position: absolute;
+  left: -2.75rem;
+  top: 1.5rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background: rgba(102, 126, 234, 0.8);
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.education-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-degree {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.education-institution {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.education-period {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.education-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-details li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.education-details li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #4ecdc4;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .achievements-list {
@@ -327,11 +447,13 @@
     grid-template-columns: 1fr;
   }
 
-  .experience-timeline {
+  .experience-timeline,
+  .education-timeline {
     padding-left: 1.5rem;
   }
 
-  .experience-item::before {
+  .experience-item::before,
+  .education-item::before {
     left: -2rem;
   }
 }
