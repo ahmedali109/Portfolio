@@ -459,7 +459,7 @@ button:active,
   .skills-section {
     grid-column: 4 / 10;
     grid-row: 1 / 4;
-    padding: 1.5rem;
+    padding: 0.37rem;
     min-height: 0;
   }
 }
