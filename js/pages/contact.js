@@ -2,19 +2,196 @@ export function ContactPage() {
   const container = document.createElement("div");
   container.className = "page-container";
   container.innerHTML = `
-    <div class="p-8 max-w-4xl mx-auto">
-      <button class="back-btn mb-8 px-4 py-2 bg-gray-800 text-white rounded-lg" data-animate>← Back</button>
-      <h1 class="text-5xl font-bold mb-6 text-gray-900" data-animate>Contact Me</h1>
-      <div class="space-y-4" data-animate>
-        <p class="text-xl text-gray-600 leading-relaxed">Get in touch for collaborations and opportunities.</p>
-        <p class="text-lg text-gray-500 leading-relaxed">Let's create something amazing together.</p>
+    <div class="contact-container">
+      <button class="back-btn" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 0.75rem 1.5rem; border-radius: 0.75rem; cursor: pointer; font-weight: 500; transition: all 0.3s ease; margin-bottom: 2rem;">
+        ← Back to Home
+      </button>
+      
+      <div class="contact-header">
+        <h1 class="contact-title" data-animate>Get In Touch</h1>
+        <p class="contact-subtitle" data-animate>Have a project in mind or just want to say hello? Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-content">
+        <!-- Contact Form -->
+        <div class="contact-form" data-animate>
+          <div class="form-success" id="formSuccess">
+            ✓ Message sent successfully! I'll get back to you soon.
+          </div>
+          <div class="form-error" id="formError">
+            ✗ Oops! Something went wrong. Please try again.
+          </div>
+          
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                class="form-input" 
+                placeholder="John Doe" 
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input" 
+                placeholder="john@example.com" 
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                class="form-input" 
+                placeholder="Project Collaboration" 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                class="form-textarea" 
+                placeholder="Tell me about your project or inquiry..." 
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info" data-animate>
+          <h2 class="info-title">Contact Information</h2>
+          
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-content">
+              <div class="info-label">Email</div>
+              <div class="info-value">
+                <a href="mailto:ahmedalynaguibhassan@gmail.com">ahmedalynaguibhassan@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div class="info-content">
+              <div class="info-label">Phone</div>
+              <div class="info-value">+201067616350</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <div class="info-label">Location</div>
+              <div class="info-value">Zagazig, Egypt</div>
+            </div>
+          </div>
+
+          <div class="contact-social-links">
+            <a href="https://github.com/ahmedali109" class="contact-social-link" title="GitHub" target="_blank" rel="noopener">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmedalynaguib/" class="contact-social-link" title="LinkedIn" target="_blank" rel="noopener">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   `;
 
+  // Back button functionality
   const backBtn = container.querySelector(".back-btn");
   backBtn.addEventListener("click", () => {
     window.location.hash = "home";
+  });
+
+  backBtn.addEventListener("mouseenter", () => {
+    backBtn.style.background = "rgba(255, 255, 255, 0.15)";
+    backBtn.style.transform = "translateX(-3px)";
+  });
+
+  backBtn.addEventListener("mouseleave", () => {
+    backBtn.style.background = "rgba(255, 255, 255, 0.1)";
+    backBtn.style.transform = "translateX(0)";
+  });
+
+  // Form submission
+  const form = container.querySelector("#contactForm");
+  const successMsg = container.querySelector("#formSuccess");
+  const errorMsg = container.querySelector("#formError");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Hide previous messages
+    successMsg.classList.remove("show");
+    errorMsg.classList.remove("show");
+
+    // Get form data
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject") || "No subject",
+      message: formData.get("message"),
+    };
+
+    // Simulate form submission (replace with actual API call)
+    setTimeout(() => {
+      // Success simulation
+      console.log("Form data:", data);
+      successMsg.classList.add("show");
+      form.reset();
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        successMsg.classList.remove("show");
+      }, 5000);
+
+      // For actual implementation, uncomment below and add your endpoint:
+      /*
+      fetch('YOUR_API_ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(data => {
+        successMsg.classList.add("show");
+        form.reset();
+        setTimeout(() => successMsg.classList.remove("show"), 5000);
+      })
+      .catch(error => {
+        errorMsg.classList.add("show");
+        setTimeout(() => errorMsg.classList.remove("show"), 5000);
+      });
+      */
+    }, 500);
   });
 
   return container;
