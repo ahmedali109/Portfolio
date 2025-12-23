@@ -3,7 +3,7 @@ export function ProfilePage() {
   container.className = "page-container";
 
   // Load profile data
-  fetch("./data/profile.json")
+  fetch("data/profile.json")
     .then((response) => response.json())
     .then((data) => {
       container.innerHTML = `
