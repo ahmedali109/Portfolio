@@ -3,27 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
       rel="shortcut icon"
       href="./assets/images/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="styles/app.css" />
-    <link rel="stylesheet" href="styles/profile.css" />
-    <link rel="stylesheet" href="styles/contact.css" />
-    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="stylesheet" href="styles/bundle.min.css" />
     <script type="text/javascript" src="./js/env.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: window.ENV?.EMAILJS_PUBLIC_KEY,
-        });
-      })();
-    </script>
     <title>Ahmed Ali - Portfolio</title>
   </head>
   <body>
