@@ -1,9 +1,11 @@
+import { getPath } from "../config.js";
+
 export function ProfilePage() {
   const container = document.createElement("div");
   container.className = "page-container";
 
   // Load profile data
-  fetch("data/profile.json")
+  fetch(getPath("data/profile.json"))
     .then((response) => response.json())
     .then((data) => {
       container.innerHTML = `
