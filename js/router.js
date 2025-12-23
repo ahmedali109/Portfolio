@@ -3,6 +3,7 @@ import { ProfilePage } from "./pages/profile.js";
 import { ProjectsPage } from "./pages/projects.js";
 import { ContactPage } from "./pages/contact.js";
 import { BlogPage } from "./pages/blog.js";
+import { CertificatesPage } from "./pages/certificates.js";
 
 const routes = {
   "": wrapper,
@@ -11,6 +12,7 @@ const routes = {
   contact: ContactPage,
   profile: ProfilePage,
   blog: BlogPage,
+  certificates: CertificatesPage,
 };
 
 export function navigateTo(path) {

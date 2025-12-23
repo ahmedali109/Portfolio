@@ -9,7 +9,7 @@ class SnowEffect {
     this.animationId = null;
     this.isScrolling = false;
     this.scrollTimeout = null;
-    this.maxSnowflakes = 80; // More snowflakes
+    this.maxSnowflakes = 45; // Optimized for performance
     this.wind = 0;
     this.windTarget = 0;
   }
@@ -113,7 +113,7 @@ class SnowEffect {
   animate() {
     if (this.isScrolling) {
       // Pause during scroll for performance
-      this.animationId = requestAnimationFrame(() => this.animate());
+      this.scheduleNextFrame();
       return;
     }
 
@@ -158,11 +158,28 @@ class SnowEffect {
       this.ctx.shadowBlur = 0;
     });
 
-    this.animationId = requestAnimationFrame(() => this.animate());
+    this.scheduleNextFrame();
+  }
+
+  scheduleNextFrame() {
+    // Use requestIdleCallback when available for better performance
+    if (window.requestIdleCallback) {
+      this.animationId = requestIdleCallback(
+        () => {
+          requestAnimationFrame(() => this.animate());
+        },
+        { timeout: 50 }
+      );
+    } else {
+      this.animationId = requestAnimationFrame(() => this.animate());
+    }
   }
 
   destroy() {
     if (this.animationId) {
+      if (window.cancelIdleCallback) {
+        cancelIdleCallback(this.animationId);
+      }
       cancelAnimationFrame(this.animationId);
     }
     if (this.canvas && this.canvas.parentNode) {
