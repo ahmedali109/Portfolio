@@ -1,6 +1,8 @@
+import { getPath } from "./config.js";
+
 export function wrapper() {
   // Fetch skills data and render grid
-  fetch("data/profile.json")
+  fetch(getPath("data/profile.json"))
     .then((response) => response.json())
     .then((data) => {
       const skillsSection = document.querySelector(".skills-section");
@@ -43,16 +45,37 @@ export function wrapper() {
           </div>
         </div>
         <div class="grid-item projects-section" data-show="projects">
-          <img src="assets/images/projects.png" alt="projects" />
+          <img src="${getPath("assets/images/projects.png")}" alt="projects" />
+          <div class="section-label">
+            <span class="label-text">Projects</span>
+            <span class="click-hint">Click to explore →</span>
+          </div>
         </div>
-        <div class="grid-item skills-section"></div>
+        <div class="grid-item skills-section">
+          <div class="section-overlay-label">
+            <span class="label-text">Technical Skills</span>
+          </div>
+        </div>
         <div class="grid-item contact-section" data-show="contact">
-          <img src="assets/images/contact.png" alt="contactus" />
+          <img src="${getPath("assets/images/contact.png")}" alt="contactus" />
+          <div class="section-label">
+            <span class="label-text">Contact</span>
+            <span class="click-hint">Click to connect →</span>
+          </div>
         </div>
         <div class="grid-item profile-section" data-show="profile">
-          <img src="assets/images/profile.jpeg" alt="Profile" />
+          <img src="${getPath("assets/images/profile.jpeg")}" alt="Profile" />
+          <div class="section-label">
+            <span class="label-text">About Me</span>
+            <span class="click-hint">Click to view →</span>
+          </div>
         </div>
-        <div class="grid-item blog-section" data-show="blog">Blog</div>
+        <div class="grid-item blog-section" data-show="blog">
+          <div class="blog-content">
+            <span class="blog-title">Blog</span>
+            <span class="click-hint">Click to read →</span>
+          </div>
+        </div>
     </div>
     `;
 }
