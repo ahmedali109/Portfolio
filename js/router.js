@@ -1,22 +1,16 @@
 import { wrapper } from "./wrapper.js";
 import { ProfilePage } from "./pages/profile.js";
 import { ProjectsPage } from "./pages/projects.js";
-import { SkillsPage } from "./pages/skills.js";
 import { ContactPage } from "./pages/contact.js";
-import { ExperiencePage } from "./pages/experience.js";
 import { BlogPage } from "./pages/blog.js";
-import { TestimonialsPage } from "./pages/testimonials.js";
 
 const routes = {
   "": wrapper,
   home: wrapper,
   projects: ProjectsPage,
-  skills: SkillsPage,
   contact: ContactPage,
-  expierence: ExperiencePage,
   profile: ProfilePage,
   blog: BlogPage,
-  testimonials: TestimonialsPage,
 };
 
 export function navigateTo(path) {
