@@ -1,12 +1,11 @@
-import { getPath } from "../config.js";
+import { getPath, fetchJSON } from "../config.js";
 
 export function ProfilePage() {
   const container = document.createElement("div");
   container.className = "page-container";
 
   // Load profile data
-  fetch(getPath("data/profile.json"))
-    .then((response) => response.json())
+  fetchJSON(getPath("data/profile.json"))
     .then((data) => {
       container.innerHTML = `
         <div class="profile-page-wrapper">
@@ -15,7 +14,7 @@ export function ProfilePage() {
           
           <div class="profile-header" data-scroll>
             <div class="profile-image-container">
-              <img src="${data.image}" alt="${
+              <img src="${data.image}" loading="lazy" alt="${
         data.name
       }" class="profile-image" />
             </div>

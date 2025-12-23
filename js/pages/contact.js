@@ -1,6 +1,34 @@
+// Load EmailJS dynamically when contact page is accessed
+let emailJSLoaded = false;
+
+function loadEmailJS() {
+  return new Promise((resolve, reject) => {
+    if (emailJSLoaded) {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src =
+      "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+    script.onload = () => {
+      emailjs.init({
+        publicKey: window.ENV?.EMAILJS_PUBLIC_KEY,
+      });
+      emailJSLoaded = true;
+      resolve();
+    };
+    script.onerror = () => reject(new Error("Failed to load EmailJS"));
+    document.head.appendChild(script);
+  });
+}
+
 export function ContactPage() {
   const container = document.createElement("div");
   container.className = "page-container";
+
+  // Load EmailJS in the background
+  loadEmailJS().catch((err) => console.error("EmailJS load error:", err));
   container.innerHTML = `
     <div class="contact-container">
       <button class="back-btn" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 0.75rem 1.5rem; border-radius: 0.75rem; cursor: pointer; font-weight: 500; transition: all 0.3s ease; margin-bottom: 2rem;">

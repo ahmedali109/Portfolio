@@ -1,4 +1,4 @@
-import { getPath } from "../config.js";
+import { getPath, fetchJSON } from "../config.js";
 
 export function ProjectsPage() {
   const container = document.createElement("div");
@@ -47,13 +47,7 @@ export function ProjectsPage() {
 
   // Load projects data - moved to after container is added to DOM
   setTimeout(() => {
-    fetch(getPath("data/projects.json"))
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
+    fetchJSON(getPath("data/projects.json"))
       .then((data) => {
         renderProjects(data.projects, container);
         setupFilters(data.projects, container);
@@ -101,7 +95,7 @@ function renderProjects(projects, container, filter = "all") {
       (project) => `
     <div class="projects-card ${project.featured ? "featured" : ""}">
       <div class="project-image-wrapper">
-        <img src="${project.image}" alt="${
+        <img src="${project.image}" loading="lazy" alt="${
         project.title
       }" class="project-image" onerror="this.src='https://via.placeholder.com/800x600?text=${encodeURIComponent(
         project.title
