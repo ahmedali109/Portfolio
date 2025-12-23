@@ -150,48 +150,68 @@ export function ContactPage() {
     successMsg.classList.remove("show");
     errorMsg.classList.remove("show");
 
+    // Get submit button and disable it
+    const submitBtn = form.querySelector(".form-submit");
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
     // Get form data
     const formData = new FormData(form);
-    const data = {
+
+    // Get current time
+    const now = new Date();
+    const timeString = now.toLocaleString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+    const templateParams = {
       name: formData.get("name"),
       email: formData.get("email"),
-      subject: formData.get("subject") || "No subject",
+      subject: formData.get("subject") || "New message from portfolio",
       message: formData.get("message"),
+      time: timeString,
     };
 
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-      // Success simulation
-      console.log("Form data:", data);
-      successMsg.classList.add("show");
-      form.reset();
+    // Send email using EmailJS
+    emailjs
+      .send(
+        window.ENV.EMAILJS_SERVICE_ID,
+        window.ENV.EMAILJS_TEMPLATE_ID,
+        templateParams
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          successMsg.classList.add("show");
+          form.reset();
 
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        successMsg.classList.remove("show");
-      }, 5000);
-
-      // For actual implementation, uncomment below and add your endpoint:
-      /*
-      fetch('YOUR_API_ENDPOINT', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMsg.classList.remove("show");
+          }, 5000);
         },
-        body: JSON.stringify(data),
-      })
-      .then(response => response.json())
-      .then(data => {
-        successMsg.classList.add("show");
-        form.reset();
-        setTimeout(() => successMsg.classList.remove("show"), 5000);
-      })
-      .catch(error => {
-        errorMsg.classList.add("show");
-        setTimeout(() => errorMsg.classList.remove("show"), 5000);
+        (error) => {
+          console.log("FAILED...", error);
+          errorMsg.classList.add("show");
+
+          // Hide error message after 5 seconds
+          setTimeout(() => {
+            errorMsg.classList.remove("show");
+          }, 5000);
+        }
+      )
+      .finally(() => {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
       });
-      */
-    }, 500);
   });
 
   return container;
