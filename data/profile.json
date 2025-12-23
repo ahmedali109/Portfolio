@@ -2,7 +2,7 @@
   "id": 1,
   "name": "Ahmed Ali",
   "role": "Software Engineer",
-  "image": "../assets/images/profile.jpeg",
+  "image": "./assets/images/profile.jpeg",
   "email": "ahmedalynaguibhassan@gmail.com",
   "location": "Zagazig, Egypt",
   "linkedinUrl": "https://www.linkedin.com/in/ahmedalynaguib/",

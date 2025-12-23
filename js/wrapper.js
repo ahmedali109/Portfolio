@@ -1,6 +1,6 @@
 export function wrapper() {
   // Fetch skills data and render grid
-  fetch("../data/profile.json")
+  fetch("./data/profile.json")
     .then((response) => response.json())
     .then((data) => {
       const skillsSection = document.querySelector(".skills-section");
@@ -43,14 +43,14 @@ export function wrapper() {
           </div>
         </div>
         <div class="grid-item projects-section" data-show="projects">
-          <img src="../assets/images/projects.png" alt="projects" />
+          <img src="./assets/images/projects.png" alt="projects" />
         </div>
         <div class="grid-item skills-section"></div>
         <div class="grid-item contact-section" data-show="contact">
-          <img src="../assets/images/contact.png" alt="contactus" />
+          <img src="./assets/images/contact.png" alt="contactus" />
         </div>
         <div class="grid-item profile-section" data-show="profile">
-          <img src="../assets/images/profile.jpeg" alt="Profile" />
+          <img src="./assets/images/profile.jpeg" alt="Profile" />
         </div>
         <div class="grid-item blog-section" data-show="blog">Blog</div>
     </div>
