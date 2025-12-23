@@ -37,11 +37,11 @@ export function wrapper() {
 
   return `
     <div class="wrapper-enter portfolio-grid">
-        <div class="grid-item expierence-section">
-          <div class="experience-content">
-            <h1 class="experience-number">1</h1>
-            <p class="experience-text">Years</p>
-            <p class="experience-text">Experience</p>
+        <div class="grid-item profile-section" data-show="profile">
+          <img src="${getPath("assets/images/profile.jpeg")}" alt="Profile" />
+          <div class="section-label">
+            <span class="label-text">About Me</span>
+            <span class="click-hint">Click to view →</span>
           </div>
         </div>
         <div class="grid-item projects-section" data-show="projects">
@@ -51,9 +51,11 @@ export function wrapper() {
             <span class="click-hint">Click to explore →</span>
           </div>
         </div>
-        <div class="grid-item skills-section">
-          <div class="section-overlay-label">
-            <span class="label-text">Technical Skills</span>
+        <div class="grid-item expierence-section">
+          <div class="experience-content">
+            <h1 class="experience-number">1</h1>
+            <p class="experience-text">Years</p>
+            <p class="experience-text">Experience</p>
           </div>
         </div>
         <div class="grid-item contact-section" data-show="contact">
@@ -63,16 +65,16 @@ export function wrapper() {
             <span class="click-hint">Click to connect →</span>
           </div>
         </div>
-        <div class="grid-item profile-section" data-show="profile">
-          <img src="${getPath("assets/images/profile.jpeg")}" alt="Profile" />
-          <div class="section-label">
-            <span class="label-text">About Me</span>
-            <span class="click-hint">Click to view →</span>
+        <div class="grid-item skills-section">
+          <div class="section-overlay-label">
+            <span class="label-text">Technical Skills</span>
           </div>
         </div>
         <div class="grid-item blog-section" data-show="blog">
           <div class="blog-content">
-            <span class="blog-title">Blog</span>
+          </div>
+          <div class="section-label">
+            <span class="label-text">Blog</span>
             <span class="click-hint">Click to read →</span>
           </div>
         </div>
