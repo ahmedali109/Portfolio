@@ -50,8 +50,27 @@ export function BlogPage() {
   setTimeout(() => {
     fetchJSON(getPath("data/blog.json"))
       .then((data) => {
-        renderPosts(data.posts, container);
-        setupFilters(data.posts, container);
+        if (!data.posts || data.posts.length === 0) {
+          // Hide filters if no posts
+          const filters = container.querySelector(".blog-filters");
+          if (filters) {
+            filters.style.display = "none";
+          }
+
+          // Show empty state
+          const grid = container.querySelector("#blogGrid");
+          if (grid) {
+            grid.innerHTML = `
+              <div class="blog-empty" style="grid-column: 1/-1;">
+                <h3>No posts found</h3>
+                <p>Check back later for new content.</p>
+              </div>
+            `;
+          }
+        } else {
+          renderPosts(data.posts, container);
+          setupFilters(data.posts, container);
+        }
       })
       .catch((error) => {
         console.error("Error loading blog posts:", error);
