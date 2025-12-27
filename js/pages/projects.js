@@ -49,15 +49,34 @@ export function ProjectsPage() {
   setTimeout(() => {
     fetchJSON(getPath("data/projects.json"))
       .then((data) => {
-        renderProjects(data.projects, container);
-        setupFilters(data.projects, container);
+        if (!data.projects || data.projects.length === 0) {
+          // Hide filters if no projects
+          const filters = container.querySelector(".projects-filters");
+          if (filters) {
+            filters.style.display = "none";
+          }
+
+          // Show empty state
+          const grid = container.querySelector("#projectsGrid");
+          if (grid) {
+            grid.innerHTML = `
+              <div class="projects-empty" style="grid-column: 1/-1; text-align: center;">
+                <h3>No projects found</h3>
+                <p>Check back later for new projects.</p>
+              </div>
+            `;
+          }
+        } else {
+          renderProjects(data.projects, container);
+          setupFilters(data.projects, container);
+        }
       })
       .catch((error) => {
         console.error("Error loading projects:", error);
         const grid = container.querySelector("#projectsGrid");
         if (grid) {
           grid.innerHTML = `
-            <div class="projects-empty" style="grid-column: 1/-1;">
+            <div class="projects-empty" style="grid-column: 1/-1; text-align: center;">
               <h3>Unable to load projects</h3>
               <p>Error: ${error.message}</p>
             </div>
@@ -82,7 +101,7 @@ function renderProjects(projects, container, filter = "all") {
 
   if (filteredProjects.length === 0) {
     grid.innerHTML = `
-      <div class="projects-empty">
+      <div class="projects-empty" style="grid-column: 1/-1; text-align: center;">
         <h3>No projects found</h3>
         <p>Try selecting a different filter.</p>
       </div>
