@@ -1,0 +1,164 @@
+{
+  "certificates": [
+    {
+      "id": 1,
+      "title": "ACPC Teens Programming Competition",
+      "issuer": "ACPC",
+      "credentialId": "ACPC-TEENS",
+      "skills": ["Programming", "Problem Solving"],
+      "description": "I participated in ACPC Teens while I was in 11th grade. I solved one problem and gained a lot of experience from the competition.",
+      "image": "assets/certificates/ACPC-teens.jpeg",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "AI Hackathon – Cairo ICT",
+      "issuer": "Cairo ICT",
+      "credentialId": "AI-HACKATHON",
+      "skills": ["Artificial Intelligence", "Problem Solving"],
+      "description": "I attended a hackathon at Cairo ICT where our team solved a problem using artificial intelligence.",
+      "image": "assets/certificates/Ai Hackathon.jpeg",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Intel ISEF Finals",
+      "issuer": "Intel ISEF",
+      "credentialId": "ISEF-FINALS",
+      "skills": ["Robotics", "Innovation"],
+      "description": "I participated in Intel ISEF and qualified for the finals. I built an integrated robot to solve car accident problems by adding side bumpers that activate when danger is detected.",
+      "image": "assets/certificates/isef-2021.jpeg",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Intel ISEF Certification",
+      "issuer": "Intel ISEF",
+      "credentialId": "ISEF-CERT",
+      "skills": ["Robotics"],
+      "description": "This certificate is for the same Intel ISEF competition, but I received it as an additional certificate for the same project.",
+      "image": "assets/certificates/isef-2021-online.jpeg",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Intel ISEF – 6th Place",
+      "issuer": "Intel ISEF",
+      "credentialId": "ISEF-6TH-PLACE",
+      "skills": ["Robotics"],
+      "description": "I participated in Intel ISEF and achieved 6th place. I built an all-in-one robot, and my project was featured in an interview with Youm7 newspaper.",
+      "image": "assets/certificates/isef-2020.jpeg",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "title": "ITI Mobile Development Training",
+      "issuer": "Information Technology Institute",
+      "credentialId": "ITI-MOBILE",
+      "skills": ["Flutter", "Mobile Development"],
+      "description": "I completed a mobile development training at ITI using Flutter. I received the Best Project award and was honored by the university president.",
+      "image": "assets/certificates/ITI.jpeg",
+      "featured": true
+    },
+    {
+      "id": 7,
+      "title": "ORCE Competition – Sumo Robot",
+      "issuer": "ORCE",
+      "credentialId": "ORCE-SUMO",
+      "skills": ["Robotics"],
+      "description": "I participated in the ORCE competition where we built a Sumo robot.",
+      "image": "assets/certificates/infinix.jpeg",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "ORCE Competition – Line Follower Robot",
+      "issuer": "ORCE",
+      "credentialId": "ORCE-LINEFOLLOWER",
+      "skills": ["Robotics"],
+      "description": "I participated in the ORCE competition where we built a line follower robot.",
+      "image": "assets/certificates/orce.jpeg",
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "RoboCup Simulation Competition",
+      "issuer": "RoboCup",
+      "credentialId": "ROBOCUP-SIM",
+      "skills": ["Robotics", "Programming"],
+      "description": "I participated in the RoboCup competition where the robot was programmed using a simulator.",
+      "image": "assets/certificates/robocup.jpeg",
+      "featured": true
+    },
+    {
+      "id": 10,
+      "title": "Top 100 Influential Figures Recognition",
+      "issuer": "Arab Recognition Program",
+      "credentialId": "TOP100-ACHIEVER",
+      "skills": ["Artificial Intelligence", "Robotics"],
+      "description": "I was recognized as one of the top 100 influential people in the Arab world for building a robot using artificial intelligence.",
+      "image": "assets/certificates/top-100.jpeg",
+      "featured": true
+    },
+    {
+      "id": 11,
+      "title": "Best Teamwork Award",
+      "issuer": "Competition Organizer",
+      "credentialId": "TEAMWORK-AWARD",
+      "skills": ["Teamwork"],
+      "description": "I received an award for the best team-based project.",
+      "image": "assets/certificates/young-innovators.jpeg",
+      "featured": false
+    },
+    {
+      "id": 12,
+      "title": "Data Analysis Training",
+      "issuer": "Parkville Company",
+      "credentialId": "PARKVILLE-DATA",
+      "skills": ["Data Analysis", "Power BI"],
+      "description": "I trained at Parkville Company in data analysis using Power BI.",
+      "image": "assets/certificates/z-alpha.jpeg",
+      "featured": false
+    },
+    {
+      "id": 13,
+      "title": "Code.org Course",
+      "issuer": "Code.org",
+      "credentialId": "CODEORG-COURSE-A",
+      "skills": ["Programming"],
+      "description": "I completed an online course from Code.org.",
+      "image": "assets/certificates/course-1.jpeg",
+      "featured": false
+    },
+    {
+      "id": 14,
+      "title": "Code.org Course",
+      "issuer": "Code.org",
+      "credentialId": "CODEORG-COURSE-B",
+      "skills": ["Programming"],
+      "description": "I completed an online course from Code.org.",
+      "image": "assets/certificates/course-2.jpeg",
+      "featured": false
+    },
+    {
+      "id": 15,
+      "title": "Code.org Course",
+      "issuer": "Code.org",
+      "credentialId": "CODEORG-COURSE-C",
+      "skills": ["Programming"],
+      "description": "I completed an online course from Code.org.",
+      "image": "assets/certificates/course-3.jpeg",
+      "featured": false
+    },
+    {
+      "id": 16,
+      "title": "Code.org Course",
+      "issuer": "Code.org",
+      "credentialId": "CODEORG-COURSE-D",
+      "skills": ["Programming"],
+      "description": "I completed an online course from Code.org.",
+      "image": "assets/certificates/course-4.jpeg",
+      "featured": false
+    }
+  ]
+}

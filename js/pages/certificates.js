@@ -107,17 +107,7 @@ function renderCertificates(certificates, container, filter = "all") {
         
         <p class="certificate-description">${cert.description}</p>
         
-        <div class="certificate-footer">
-          <div class="certificate-meta">
-            <div class="certificate-date">
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-              ${formatDate(cert.date)}
-            </div>
-            <div class="certificate-id">ID: ${cert.credentialId}</div>
-          </div>
-          
+        <div class="certificate-footer">  
           <div class="certificate-skills">
             ${cert.skills
               .slice(0, 3)
@@ -153,11 +143,4 @@ function setupFilters(certificates, container) {
       renderCertificates(certificates, container, filter);
     });
   });
-}
-
-function formatDate(dateString) {
-  const [year, month] = dateString.split("-");
-  const date = new Date(year, month - 1);
-  const options = { year: "numeric", month: "short" };
-  return date.toLocaleDateString("en-US", options);
 }
